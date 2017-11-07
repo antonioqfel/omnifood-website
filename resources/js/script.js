@@ -130,5 +130,21 @@ $(document).ready(function() {
         }
     });
 
-});
+    /* MAPS */
+    var map = new GMaps({
+        div: '.map', // This is where our map will appear
+        lat: 38.7436883,
+        lng: -9.05, // Before -9.1953085, we changed it to make visible to the left
+        zoom: 12 // Initial value is 15
+    });
 
+    map.addMarker({
+        lat: 38.74368834,
+        lng: -9.1953085,
+        title: 'Lisbon',
+        infoWindow: {
+            content: '<p>Our Lisbon headquarters</p>'
+        }
+    });
+
+});
